@@ -1,21 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="button.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
+
 <body>
+  <video autoplay muted loop id="myVideo">
+    <source src="hero.mp4" type="video/mp4" />
+  </video>
   <header class="Header__container">
     <div class="Header__left">
       <div class="Header__title">
         <h1>Bear Cabin</h1>
       </div>
     </div>
+    <button class="Header__burger" id="burgerBtn">
+      <i class="fas fa-bars"></i>
+    </button>
     <menu class="Header__menu">
-      <li class="Header__menuItem">Explore</li>
+      <li class="Header__menuItem"><a href="#">Home</a></li>
       <li class="Header__menuItem">Wander</li>
       <li class="Header__menuItem">Discover</li>
       <li class="Header__menuItem">Contact</li>
@@ -24,13 +33,128 @@
   <main>
     <section class="Hero">
       <div class="Hero__content">
-        <h2 class="Hero__title">Magic starts here</h2>
-        <p class="Hero__subtitle">Experience a night in a cabin in the middle of magical Rocky Mountains</p>
-        <button class="button">Subscribe</button>
+        <p class="Hero__title">Bienvenido al proyecto de sostenibilidad ODS11</p>
+
+        <div class="container">
+          <a href="#section-ODS11-content">
+
+            <div data-text="ODS11" class="glass">
+              <i class="fa-solid fa-hotel" style="font-size: 48px;"></i>
+            </div>
+          </a>
+          <a href="#section-problemas-content">
+
+            <div data-text="Problemas" class="glass">
+              <i class="fa-solid fa-heart-circle-exclamation" style="font-size: 48px;"></i>
+            </div>
+
+          </a>
+          <a href="#section-propuesta-content">
+            <div data-text="Propuesta" class="glass">
+              <i class="fa-solid fa-face-smile" style="font-size: 48px;"></i>
+            </div>
+          </a>
+          <a href="#section-mapa-content">
+
+            <div data-text="Mapa" class="glass">
+              <i class="fa-solid fa-map" style="font-size: 48px;"></i>
+            </div>
+
+          </a>
+          <a href="#section-soluciones-content">
+
+          <div id="section-soluciones" data-text="Soluciones" class="glass">
+              <i class="fa-regular fa-thumbs-up" style="font-size: 48px;"></i>
+            </div>
+
+            </a>
+        </div>
       </div>
-      <div class="Hero__image" id="Hero__image"></div>
-      <div class="Hero__mask"></div>
+    </section>
+
+    <section id="section-ODS11-content">
+      <h3>ODS11 Section</h3>
+      <p>Contenido de la sección ODS11.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lacinia efficitur dui ac porttitor. Morbi quis
+        lectus quis lorem ornare viverra ut ut justo. In egestas, augue sed suscipit aliquam, dui tortor fermentum ante,
+        et pharetra libero dui vitae nisi. Nunc fermentum sollicitudin nibh, vitae venenatis nibh imperdiet tincidunt.
+        Nullam at ligula eu nunc lacinia varius vel at libero. Aliquam finibus nulla quis lacus dignissim sodales. Donec
+        tristique, leo ac placerat accumsan, mauris felis sodales ipsum, vel varius urna velit ut ligula. Vivamus
+        consectetur tellus ut blandit sagittis. In fringilla metus ultricies, ultricies nunc in, tristique sapien. Class
+        aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis nisi justo, mollis a
+        ultrices id, ornare ut arcu. Aenean convallis interdum odio, eu feugiat turpis tempor quis. Quisque et tempor
+        lacus, et egestas lectus.
+
+        Sed porttitor imperdiet vulputate. Proin non tellus eu ex mattis finibus ut ac dui. Suspendisse ac nunc et erat
+        ultricies tincidunt. Donec hendrerit eu ante vel gravida. Aliquam aliquam et dolor ut vulputate. Vestibulum ante
+        ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nunc ullamcorper velit ac erat aliquet,
+        a scelerisque dolor bibendum. Etiam eu leo sit amet diam dictum cursus. Curabitur viverra a diam quis
+        consectetur. Aliquam efficitur eros magna, nec placerat augue pellentesque vitae. Proin egestas mauris nec leo
+        finibus commodo.
+
+        Integer mattis mattis sagittis. Duis ipsum dui, mollis quis rhoncus blandit, dignissim vitae turpis. Nullam vel
+        elementum lacus, ac tincidunt est. Donec nec odio metus. Phasellus ipsum urna, efficitur sit amet mauris in,
+        ultricies pulvinar nisi. Aenean et eleifend lectus, ut malesuada lacus. Curabitur ac porta arcu, nec scelerisque
+        purus. Nulla euismod condimentum erat ut hendrerit.
+
+        Nullam accumsan nisi nec mattis placerat. Vivamus cursus dolor id turpis consectetur aliquam. Nunc eu dignissim
+        nulla. Duis sagittis ligula at pulvinar eleifend. Proin consequat suscipit maximus. Proin ornare, nulla et
+        mollis ultrices, nisi elit placerat elit, vel luctus ipsum enim et lorem. Cras euismod libero in sem volutpat
+        rutrum. Nullam et arcu eu dolor auctor dignissim semper eget ligula. Nulla facilisi. Maecenas dictum sed eros
+        vel facilisis. Vestibulum commodo lectus eu lacus feugiat, eu blandit nibh porta. Mauris consectetur turpis
+        purus, egestas rhoncus lacus iaculis in. Morbi tincidunt nulla vel nisi finibus pharetra. Nulla ac ex tempor
+        ante ultrices cursus. Nullam mattis, tellus quis viverra congue, mauris urna aliquet sem, ut dictum nisi urna eu
+        velit. Donec non mollis nunc, in malesuada sapien.
+
+        Sed sollicitudin nulla ut vestibulum semper. Proin quis venenatis urna. In sollicitudin justo id enim gravida,
+        quis ultrices sapien lobortis. Phasellus sit amet fermentum metus. Nullam ultricies at enim a molestie. Integer
+        congue non felis a egestas. Nunc laoreet ex et enim ultricies, at interdum purus luctus. Donec tincidunt ut
+        tortor at laoreet. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec semper laoreet nibh eu
+        sodales. In euismod est nunc, non pulvinar enim finibus at. Sed orci nulla, condimentum in metus et, tincidunt
+        pellentesque neque. Maecenas nec mattis urna, quis ultrices sem. Donec viverra tempus tellus, at posuere neque
+        lobortis eu.</p>
+    </section>
+
+    <section id="section-problemas-content" class="hiddenSection">
+      <h3>Problemas Section</h3>
+      <p>Contenido de la sección de Problemas.</p>
+    </section>
+
+    <section id="section-propuesta-content" class="hiddenSection">
+      <h3>Propuesta Section</h3>
+      <p>Contenido de la sección Propuesta.</p>
+    </section>
+
+    <section id="section-mapa-content" class="hiddenSection">
+      <h3>Mapa Section</h3>
+      <p>Contenido de la sección Mapa.</p>
+    </section>
+
+    <section id="section-soluciones-content" class="hiddenSection">
+      <h3>Soluciones Section</h3>
+      <p>Contenido de la sección Soluciones.</p>
     </section>
   </main>
+
+  <script>
+    const burger = document.getElementById('burgerBtn');
+    const menu = document.querySelector('.Header__menu');
+
+    // Toggle al hacer clic
+    burger.addEventListener('click', () => {
+      menu.classList.toggle('open');
+    });
+
+    // Al redimensionar la ventana, restablecer si es pantalla grande
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 700) {
+        menu.classList.remove('open');
+        menu.style.display = 'flex'; // Forzar visibilidad horizontal
+      } else {
+        menu.style.display = ''; // Volver a control por CSS
+      }
+    });
+  </script>
 </body>
+
 </html>
