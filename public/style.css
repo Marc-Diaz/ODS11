@@ -249,7 +249,7 @@ h1 {
 #section-problemas-content,
 #section-propuesta-content,
 #section-mapa-content,
-#section-soluciones-content {
+#section-conclusiones-content {
   height: 100vh; 
   display:block;
   justify-content: center;
@@ -277,7 +277,7 @@ a {
 }
 
 .ods11-section h3 {
-  font-size: 2rem;
+  font-size: 3rem;
   color: #2a7f62;
   margin-bottom: 20px;
   text-align: center;
@@ -286,7 +286,7 @@ a {
 
 .ods11-content {
   margin: 100px 150px 0 200px;
-  display: flow;
+  display: flex;
   align-items: center;
   gap: 25px;
   justify-content: center;
@@ -300,9 +300,10 @@ a {
 }
 
 .ods11-image {
-  flex: 0 0 200px;
-  display: flex;
-  justify-content: center;
+  float: left;
+  margin-right: 15px;
+  max-height: 450px;
+  max-width: 450px;
 }
 
 .ods11-image img {
