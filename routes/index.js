@@ -22,7 +22,7 @@ const writeData = (data) => {
         console.error(error);
     }
 };
-250019
+
 function extraerClaveCodigo(codigo) {
     if (!codigo) return null;
     return codigo.toString().substring(0, 5);
