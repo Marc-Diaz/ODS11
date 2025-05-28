@@ -3,12 +3,9 @@ import express from "express";
 
 // Importamos las rutas
 
-/*
-import notificacionesRoute from "./routes/notificacions.js";
-import reservasRoute from "./routes/reservas.js";
-import recursosRoute from "./routes/recursos.js";
-import usuariosRoute from "./routes/usuarios.js";
-*/
+
+import route from "./routes/index.js";
+
 //Configuración
 import { PORT } from "./config.js";
 
@@ -29,13 +26,10 @@ app.set('views', './views'); //carpeta on desem els arxius .ejs
 app.get("/", (req, res)=> {
     res.render("index")
 });
-/*
+
 /// Usamos las rutas de la carpetea routes
-app.use("/notificaciones", notificacionesRoute);
-app.use("/reservas", reservasRoute);
-app.use("/recursos",recursosRoute);
-app.use("/usuarios", usuariosRoute);
-*/
+app.use("/api", route);
+
 // Iniciamos el servidor en un solo puerto
 app.listen(PORT, () => {
     console.log(`Servidor ejecutándose en http://localhost:${PORT}`);
