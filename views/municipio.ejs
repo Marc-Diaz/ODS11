@@ -1,39 +1,15 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title><%= municipio.nom %></title>
-  <link rel="icon" href="https://www.ribeirao2030.com.br/wp-content/uploads/2021/11/11-CIDADES-E-COMUNIDADES-SUSTENTAVEIS@2x.png">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="button.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="/municipio.js"></script>
 </head>
 <body>
-  <header class="Header__container">
-    <div class="Header__left">
-      <div class="Header__title">
-        <img src="image.png">
-      </div>
-    </div>
-    <button class="Header__burger" id="burgerBtn">
-      <i class="fas fa-bars"></i>
-    </button>
-    <menu class="Header__menu">
-      <li class="Header__menuItem"><a href="http://localhost:3000/">Home</a></li>
-      <li class="Header__menuItem"><a href="http://localhost:3000/problemas">Problemas</li></a>
-      <li class="Header__menuItem"><a href="http://localhost:3000/propuesta">Propuesta</li></a>
-      <li class="Header__menuItem"><a href="http://localhost:3000/map">Mapa</li></a>
-      <li class="Header__menuItem"><a href="http://localhost:3000/conclusiones">Conclusiones</li></a>
-    </menu>
-  </header>
-  <h1><%= municipio.nom %></h1>
-  <p><strong>Codi:</strong> <%= municipio.codi %></p>
-  <p><strong>Comarca:</strong> <%= municipio.nom_comarca %> (<%= municipio.codi_comarca %>)</p>
-  <p><strong>Longitud:</strong> <%= municipio.longitud %></p>
-  <p><strong>Latitud:</strong> <%= municipio.latitud %></p>
-  <p><strong>UTM X:</strong> <%= municipio.utm_x %></p>
-  <p><strong>UTM Y:</strong> <%= municipio.utm_y %></p>
-
-  <p><a href="/">Volver al listado</a></p>
+  <div id="municipio" data-codigo="8001"></div>
+  <main>
+    <h1 id="titulo"></h1>
+  </main>
 </body>
 </html>

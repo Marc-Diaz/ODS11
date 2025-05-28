@@ -1,6 +1,6 @@
 
 //ENDPOINT MAPA
-let url = "https://analisi.transparenciacatalunya.cat/resource/9aju-tpwc.json"
+let url = "http://localhost:3000/api/municipiosReciclaje"
 
 //MAPA
 const maxPuntos = 2147483647
@@ -8,7 +8,7 @@ const map = L.map('map', {
     zoom: 5,
     minZoom: 5,
     maxZoom: 20
-}).setView([41.8675, 1.5208], 8,8);
+}).setView([41.8675, 1.5208], 8.);
 let limites = [
     [21.698265, -25.708008],
     [55.028022, 18.237305]
@@ -29,8 +29,8 @@ fetch(url)
         data.forEach(punto => {
             if (puntos < maxPuntos && punto.latitud && punto.longitud) {
                 
-                let random = Math.random() * 255;
-                const color = escalaColor(random).hex();
+                let reciclaje = punto.kg_hab_any_recollida_selectiva
+                const color = escalaColor(reciclaje).hex();
 
                 const municipio = punto.nom?.normalize("NFD").replace(/[^\w\s]/g, "") || "Desconocido";
                 const marcador = L.circleMarker([punto.latitud, punto.longitud], {

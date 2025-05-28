@@ -1,9 +1,6 @@
 // Importamos las bibliotecas necesarias
 import express from "express";
-
 // Importamos las rutas
-
-
 import route from "./routes/index.js";
 
 //Configuración
@@ -42,26 +39,16 @@ app.get("/conclusiones", (req, res)=> {
 });
 
 
-app.get("map/:id", async (req,res)=>{
+app.get("/map/:id", async (req,res)=>{
     const codi = parseInt(req.params.id);
-    print(codi)
-    const url = `https://analisi.transparenciacatalunya.cat/resource/9aju-tpwc.json?codi=${codi}`
-    const response = await fetch(url)
-    const data = await response.json()
-    
-    
-
-    if(!data) res.status(404).json({message : "Municipio no encontrado"});
-    else {
-        res.render("municipio")
-    }
+    res.render("municipio", {codi})
 });
 
 
 
 
-/// Usamos las rutas de la carpetea routes
-// app.use("/api", route);
+
+app.use("/api", route);
 
 // Iniciamos el servidor en un solo puerto
 app.listen(PORT, () => {
