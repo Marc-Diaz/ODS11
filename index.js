@@ -9,8 +9,6 @@ import route from "./routes/index.js";
 //Configuración
 import { PORT } from "./config.js";
 
-
-
 // Creamos la aplicación
 const app = express();
 app.use(express.json())
@@ -22,11 +20,43 @@ app.set('view engine','ejs');//Fem servir el motor ejs
 app.set('views', './views'); //carpeta on desem els arxius .ejs
 
 
-//Endpoints Auth
+//Endpoints RENEDER
 app.get("/", (req, res)=> {
     res.render("index")
 });
 
+app.get("/map", (req, res)=> {
+    res.render("map")
+});
+
+app.get("/propuesta", (req, res)=> {
+    res.render("propuesta")
+});
+
+app.get("/problemas", (req, res)=> {
+    res.render("problemas")
+});
+
+app.get("/conclusiones", (req, res)=> {
+    res.render("conclusiones")
+});
+
+
+app.get("map/:id", async (req,res)=>{
+    const codi = parseInt(req.params.id);
+    const url = `https://analisi.transparenciacatalunya.cat/resource/9aju-tpwc.json?codi=${codi}`
+    const response = await fetch(url)
+    const data = await response.json()
+    
+    if(!data) res.status(404).json({message : "Municipio no encontrado"});
+    else {
+        res.render("municipio", {municipio})
+    }
+});
+
+
+
+/*
 /// Usamos las rutas de la carpetea routes
 app.use("/api", route);
 
