@@ -31,7 +31,7 @@ route.get("/municipiosReciclaje", (req,res)=>{
 
 
 route.get("/municipioAll/:id", async (req,res)=>{
-  const codi = parseInt(req.params.id);
+  const codi = req.params.id;
   const data = await combinarEndPointsPorMunicipio(codi)
   res.json(data)
 });

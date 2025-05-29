@@ -40,7 +40,7 @@ app.get("/conclusiones", (req, res)=> {
 
 
 app.get("/map/:id", async (req,res)=>{
-    const codi = parseInt(req.params.id);
+    const codi = req.params.id;
     res.render("municipio", {codi})
 });
 

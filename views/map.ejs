@@ -5,53 +5,35 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Mapa de Municipios</title>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
-        <script src="/map.js" defer></script>
         <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
         <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/chroma-js/2.1.0/chroma.min.js"></script>
-
-        <style>
-            main {
-                display: flex;
-                flex-direction: row;
-                width: 100%;
-                height: 750px;
-            }
-    
-            #map {
-                width: 80%;
-                margin: 10px;
-            }
-            section{
-                width: 20%;
-                flex-grow: 1;
-                background-color: lightgray;
-                border: 5px solid black;
-                padding: 20px;
-            }
-            button{
-                margin-top: 10px;
-                padding: 10px;
-                color: white;
-                background-color: black;
-                border: white;
-            }
-
-            button:active{
-                background-color: rgb(26, 25, 25);
-            }
-        </style>
+        <link rel="icon" href="https://www.ribeirao2030.com.br/wp-content/uploads/2021/11/11-CIDADES-E-COMUNIDADES-SUSTENTAVEIS@2x.png">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="button.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <link rel="stylesheet" href="map.css">
+        <script src="/map.js" defer></script>
     </head>
     
     <body>
         <main>
+            <header class="Header__container">
+                <div class="Header__left">
+                  <div class="Header__title">
+                    <img src="image.png">
+                  </div>
+                </div>
+
+                <menu class="Header__menu">
+                  <li class="Header__menuItem"><a href="http://localhost:3000/">Home</a></li>
+                  <li class="Header__menuItem"><a href="http://localhost:3000/problemas">Problemas</li></a>
+                  <li class="Header__menuItem"><a href="http://localhost:3000/propuesta">Propuesta</li></a>
+                  <li class="Header__menuItem"><a href="http://localhost:3000/map">Mapa</li></a>
+                  <li class="Header__menuItem"><a href="http://localhost:3000/conclusiones">Conclusiones</li></a>
+                </menu>
+              </header>
             <div id="map"></div>
-            <section id="informacion_municipio">
-                <h3>Informacion municipio</h3>
-                <p>Nombre: </p>
-                <p>Capital: </p>
-                <p>Habitantes: </p>
-            </section>
         </main>
     </body>
 </html>

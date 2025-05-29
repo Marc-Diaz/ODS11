@@ -42,13 +42,6 @@ fetch(url)
                     fillOpacity: 0.8
                 }).addTo(map)
                 .bindPopup(`<b>${municipio}</b>`);
-
-                marcador.on('click', () => {
-                document.getElementById('informacion_municipio').innerHTML = `
-                    <h3>Información del municipio</h3>
-                    <p><strong>Nombre:</strong> ${municipio}</p>
-                    <p><strong>CODI:</strong> ${punto.codi}</p>
-                    `;                });
                 puntos++;
                 
                 // Mostrar popup al pasar el ratón (hover)
@@ -60,7 +53,7 @@ fetch(url)
                 marcador.on('mouseout', function () {
                     this.closePopup();
                 });
-  
+                
                 // Redirigir al hacer clic en el marcador
                 marcador.on('click', function () {
                     window.location.href = `map/${punto.codi}`;
