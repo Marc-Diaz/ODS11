@@ -24,6 +24,9 @@
                     <img src="image.png">
                   </div>
                 </div>
+                <button class="Header__burger" id="burgerBtn">
+                  <i class="fas fa-bars"></i>
+                </button>
                 <menu class="Header__menu">
                   <li class="Header__menuItem"><a href="/">Home</a></li>
                   <li class="Header__menuItem"><a href="problemas">Problemas</li></a>
@@ -35,6 +38,23 @@
               <h1>Mapa del reciclaje por municipios</h1>
             <div id="map"></div>
         </main>
-        
+        <script defer>
+    const burger = document.getElementById('burgerBtn');
+    const menu = document.querySelector('.Header__menu');
+
+    // Togle al hacer clic
+    burger.addEventListener('click', () => {
+      menu.classList.toggle('open');
+    });
+
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 700) {
+        menu.classList.remove('open');
+        menu.style.display = 'flex';
+      } else {
+        menu.style.display = '';
+      }
+    });
+  </script>
     </body>
 </html>
