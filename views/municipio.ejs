@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="icon" href="https://www.ribeirao2030.com.br/wp-content/uploads/2021/11/11-CIDADES-E-COMUNIDADES-SUSTENTAVEIS@2x.png">
+  <title>ODS11: Municipio</title>
+  <link rel="icon"
+    href="https://www.ribeirao2030.com.br/wp-content/uploads/2021/11/11-CIDADES-E-COMUNIDADES-SUSTENTAVEIS@2x.png">
   <link rel="stylesheet" href="../style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="../municipio.css">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="/municipio.js" defer></script>
 </head>
+
 <body>
-  <div id="municipio" data-codigo=<%= codi %>></div>
+  <div id="municipio" data-codigo=<%=codi %>></div>
   <header class="Header__container">
     <div class="Header__left">
       <div class="Header__title">
@@ -33,9 +36,33 @@
   <main>
     <h1 id="titulo"></h1>
     <hr>
+
+    <h2>Alquiler medio (€)</h2>
     <canvas id="lineChartAlq"></canvas>
+    <h2>Viviendas disponibles</h2>
     <canvas id="lineChartHab"></canvas>
+
+    <h2>Consumo por sector (kwh)</h2>
     <canvas id="pieChart"></canvas>
   </main>
+  <script defer>
+    const burger = document.getElementById('burgerBtn');
+    const menu = document.querySelector('.Header__menu');
+
+    // Togle al hacer clic
+    burger.addEventListener('click', () => {
+      menu.classList.toggle('open');
+    });
+
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 700) {
+        menu.classList.remove('open');
+        menu.style.display = 'flex';
+      } else {
+        menu.style.display = '';
+      }
+    });
+  </script>
 </body>
+
 </html>

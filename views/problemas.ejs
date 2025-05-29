@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>ODS11: Problemas</title>
   <link rel="icon"
     href="https://www.ribeirao2030.com.br/wp-content/uploads/2021/11/11-CIDADES-E-COMUNIDADES-SUSTENTAVEIS@2x.png">
   <link rel="stylesheet" href="style.css">
@@ -117,6 +117,24 @@
       </div>
     </section>
   </main>
+  <script defer>
+    const burger = document.getElementById('burgerBtn');
+    const menu = document.querySelector('.Header__menu');
+
+    // Togle al hacer clic
+    burger.addEventListener('click', () => {
+      menu.classList.toggle('open');
+    });
+
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 700) {
+        menu.classList.remove('open');
+        menu.style.display = 'flex';
+      } else {
+        menu.style.display = '';
+      }
+    });
+  </script>
 </body>
 
 </html>

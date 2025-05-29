@@ -7,7 +7,7 @@
 
 body {
   background-color: #000;
-  font-family: "Roboto", sans-serif;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
 
 }
 
@@ -298,18 +298,21 @@ a {
 
 .ods11-text p {
   width: 100%;
-  margin-top: 50px;
+  margin-top: 20px;
+  line-height: 1.5;
 }
 
 .ods11-image {
   float: left;
+  margin: 20px;
   margin-right: 15px;
   max-height: 450px;
   max-width: 450px;
+  margin-top: 50px;
 }
 
 .ods11-image img {
-  max-width: 180px;
+  max-width: 200px;
   height: auto;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(42, 127, 98, 0.3);
