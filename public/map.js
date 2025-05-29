@@ -1,6 +1,6 @@
 
 //ENDPOINT MAPA
-let url = "http://localhost:3000/api/municipiosReciclaje"
+let url = "/api/municipiosReciclaje"
 
 //MAPA
 const maxPuntos = 2147483647
