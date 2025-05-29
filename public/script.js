@@ -69,7 +69,7 @@ async function renderLineChart() {
     },
     options: {
       responsive: true,
-      maintainAspectRatio: false, // ⬅️ Esto permite controlar el tamaño desde CSS
+      maintainAspectRatio: false, 
       plugins: {
         title: {
           display: true,
@@ -184,8 +184,7 @@ async function renderBarChart() {
 
 renderBarChart();
 
-const energiaAPI = 'https://analisi.transparenciacatalunya.cat/resource/8idm-becu.json?$limit=49797'; // Sustituye por la URL real
-
+const energiaAPI = 'https://analisi.transparenciacatalunya.cat/resource/8idm-becu.json?$limit=49797';
 async function fetchConsumoEnergetico() {
   const res = await fetch(energiaAPI);
   const data = await res.json();
