@@ -36,64 +36,83 @@
     <section id="section-problemas-content" class="ods11-section">
       <div class="ods11-content">
         <div class="ods11-text">
-          <h3>Problemas Section</h3>
-          <!--<img
-            src="https://images.pexels.com/photos/31049334/pexels-photo-31049334/free-photo-of-rascacielos-en-el-centro-de-los-angeles.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1 1x, https://images.pexels.com/photos/31049334/pexels-photo-31049334/free-photo-of-rascacielos-en-el-centro-de-los-angeles.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2 2x"
-            class="ods11-image">
-        -->
-        <div class="text-chart-wrapper">
-          <div class="text-column">
-            <p>
-              Desigualdad en el acceso a la vivienda: El precio medio del alquiler muestra una tendencia ascendente en los
-              municipios con mayor densidad de población. Este patrón sugiere una presión inmobiliaria que afecta
-              especialmente a núcleos urbanos donde la disponibilidad de suelo urbano ordenado por habitante es baja. La
-              falta de equilibrio entre oferta y demanda tensiona los precios y reduce el acceso a la vivienda para
-              sectores vulnerables.
-              Consumo energético elevado y desigual: El consumo eléctrico per cápita varía significativamente entre
-              municipios. Esta variabilidad está influenciada tanto por la actividad económica local como por la densidad
-              de población y la infraestructura vial. En municipios con redes viales más densas y presencia de sectores
-              industriales, el consumo tiende a ser mayor, lo que plantea retos en términos de eficiencia energética y
-            </p>
-          </div>
-          <div class="chart-column">
-            <canvas id="lineChart"></canvas>
-          </div>
-        </div>
-      
-            <div class="chart-container">
-            <canvas id="lineChart"></canvas>
+          <h3>Problemas</h3>
+          <div class="text-chart-wrapper">
+            <div class="text-column">
+              <h2>Crecimiento urbano desordenado y expansión del suelo urbanizable</h2>
+              <p>
+                Este gráfico de líneas refleja una tendencia sostenida de incremento en la construcción de viviendas
+                sobre suelo urbanizable, que alcanza su punto más alto en 2022 con un crecimiento del 35%. Aunque el
+                incremento en suelo no ordenado es menor, también ha ido en aumento, pasando del 5% en 2013 al 13% en
+                2022.
+              </p>
+              <p>
+                Este patrón evidencia un proceso de expansión urbana, que si no está adecuadamente planificado, puede
+                conducir a fenómenos de urbanización dispersa o difusa. Esto tiene varias implicaciones negativas: se
+                incrementa la necesidad de infraestructuras, se fragmentan los ecosistemas naturales y se aumenta la
+                dependencia del transporte privado.
+              </p>
+              <p>
+                En consecuencia, crecen las emisiones de gases de efecto
+                invernadero, los costos de mantenimiento urbano y la dificultad de acceso equitativo a servicios básicos
+                como agua, transporte, salud y educación.</p>
             </div>
-          <p>
-            Consumo energético elevado y desigual: El consumo eléctrico per cápita varía significativamente entre
-            municipios. Esta variabilidad está influenciada tanto por la actividad económica local como por la densidad
-            de población y la infraestructura vial. En municipios con redes viales más densas y presencia de sectores
-            industriales, el consumo tiende a ser mayor, lo que plantea retos en términos de eficiencia energética y
-            sostenibilidad ambiental.
-          </p>
+            <div class="chart-column">
+              <canvas id="lineChart"></canvas>
+            </div>
+          </div>
+          <div class="text-chart-wrapper">
+            <div class="text-column">
+              <h2>Elevado consumo eléctrico en sectores no domésticos</h2>
+              <p>
+                Este gráfico de barras muestra una clara desigualdad entre municipios en cuanto a la recogida selectiva
+                de residuos
+                (kg/hab/año).
+              <p>
+                Mientras que municipios como Sagàs y Pedret i Marzà superan los 2.200 kg/hab/año, otros
+                como Rubió, Pals y Forès apenas alcanzan cifras cercanas a los 1.200 kg/hab/año.
 
-            <div class="chart-container">
+              </p>
+              <p>
+                Estas diferencias sugieren que no todos los municipios están contando con los mismos recursos,
+                infraestructuras o estrategias de concienciación ciudadana. Esto pone en evidencia una falta de
+                coordinación o apoyo técnico para fomentar prácticas de reciclaje eficaces y generalizadas. Una recogida
+                selectiva desigual no solo afecta la eficiencia de la gestión de residuos, sino que también debilita los
+                esfuerzos regionales hacia una economía circular y sostenible.
+              </p>
+            </div>
+            <div class="chart-column">
               <canvas id="barChart"></canvas>
             </div>
-          <p>
-            Gestión de residuos heterogénea: La generación de residuos per cápita no guarda una relación lineal con la
-            densidad de población. Algunos municipios con baja densidad generan altos volúmenes de residuos, y la tasa
-            de recogida selectiva es muy dispar entre territorios. Esto evidencia una gestión desigual, donde los
-            sistemas de recogida y reciclaje no están optimizados de forma homogénea.
-            
-          </p>
-          <div class="chart-container">
-            <canvas id="pieChart"></canvas>
-            </div>
-          <p>          Infraestructura urbana desequilibrada: Los indicadores muestran que en varios municipios la densidad de la
-          red viaria es baja en relación a su población, lo que puede dificultar el acceso a servicios básicos y la
-          movilidad. Esta situación refleja una planificación urbana insuficiente, que no siempre acompaña el
-          crecimiento poblacional o responde a criterios de sostenibilidad.
+          </div>
+          <div class="text-chart-wrapper">
+            <div class="text-column">
+              <h2> Elevado consumo eléctrico en sectores no domésticos</h2>
+              <p>
+                Este gráfico de pastel muestra que el consumo eléctrico en Cataluña está dominado por el sector
+                industrial (37%), seguido del sector de servicios (35.3%). El consumo doméstico representa
+                un 25.3%, mientras que otros sectores como el primario, el transporte o la construcción tienen
+                porcentajes muy bajos.
+              </p>
+              <p>
 
-          Falta de integración de datos en la toma de decisiones: A pesar de la disponibilidad de múltiples
-          indicadores (energía, residuos, vivienda, territorio), no hay una sistematización clara en el uso de estos
-          datos para orientar políticas locales. La ausencia de análisis cruzado entre sectores limita la capacidad de
-          identificar relaciones causales y priorizar intervenciones efectivas.
-          </p>
+                Esta distribución refleja dos problemas principales:
+              </p>
+              <p>
+                Por un lado, una alta dependencia energética de sectores económicos intensivos en consumo eléctrico, lo
+                cual exige medidas urgentes de eficiencia energética e inversión en energías renovables para evitar un
+                impacto ambiental negativo.
+              </p>
+              <p>
+                Por otro lado, el bajo porcentaje del sector transporte (1.3%) sugiere que aún no se ha producido una
+                electrificación significativa de los sistemas de movilidad. Esto puede indicar una persistencia del uso
+                de vehículos de combustión, con sus consecuencias en términos de contaminación del aire, ruido y
+                emisiones de CO₂ en entornos urbanos.</p>
+            </div>
+            <div class="chart-column">
+              <canvas id="pieChart"></canvas>
+            </div>
+          </div>
         </div>
       </div>
     </section>

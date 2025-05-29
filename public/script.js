@@ -27,15 +27,15 @@ async function renderLineChart() {
   });
 
   const años = Object.keys(agrupados).sort();
-const datosNoOrdenado = años.map(a => {
-  const arr = agrupados[a].noOrdenado.filter(v => typeof v === 'number' && !isNaN(v));
-  return +(arr.reduce((a, b) => a + b, 0) / arr.length).toFixed(2);
-});
+  const datosNoOrdenado = años.map(a => {
+    const arr = agrupados[a].noOrdenado.filter(v => typeof v === 'number' && !isNaN(v));
+    return +(arr.reduce((a, b) => a + b, 0) / arr.length).toFixed(2);
+  });
 
-const datosUrbanizable = años.map(a => {
-  const arr = agrupados[a].urbanizable.filter(v => typeof v === 'number' && !isNaN(v));
-  return +(arr.reduce((a, b) => a + b, 0) / arr.length).toFixed(2);
-});
+  const datosUrbanizable = años.map(a => {
+    const arr = agrupados[a].urbanizable.filter(v => typeof v === 'number' && !isNaN(v));
+    return +(arr.reduce((a, b) => a + b, 0) / arr.length).toFixed(2);
+  });
 
   const ctx = document.getElementById('lineChart').getContext('2d');
   Chart.defaults.color = '#FFFFFF';
@@ -68,13 +68,13 @@ const datosUrbanizable = años.map(a => {
       ]
     },
     options: {
-      responsive: true,
+      responsive: false,
       plugins: {
         title: {
           display: true,
           text: 'Evolución de incremento de viviendas por tipo de suelo',
         },
-      
+
       },
       scales: {
         x: {
@@ -99,7 +99,7 @@ const datosUrbanizable = años.map(a => {
 
 renderLineChart();
 
-const residuosAPI = 'https://analisi.transparenciacatalunya.cat/resource/69zu-w48s.json?$limit=25000'; 
+const residuosAPI = 'https://analisi.transparenciacatalunya.cat/resource/69zu-w48s.json?$limit=25000';
 async function fetchTopMunicipios() {
   const res = await fetch(residuosAPI);
   const data = await res.json();
@@ -136,12 +136,14 @@ async function renderBarChart() {
       datasets: [{
         label: 'Kg/hab/año recogida selectiva',
         data: datos.map(d => d.recogida),
-      backgroundColor: viridisColors,
+        backgroundColor: viridisColors,
         borderColor: viridisColors,
         borderWidth: 1
       }]
     },
     options: {
+      responsive: false,
+
       indexAxis: 'x',
       scales: {
         x: {
@@ -212,7 +214,7 @@ async function renderPieChart() {
 
   const ctx = document.getElementById('pieChart').getContext('2d');
   ctx.width = 800;
-ctx.height = 600
+  ctx.height = 600
   new Chart(ctx, {
     type: 'pie',
     data: {
@@ -227,7 +229,7 @@ ctx.height = 600
       }]
     },
     options: {
-      responsive: true,
+      responsive: false,
       plugins: {
         title: {
           display: true,
@@ -244,7 +246,7 @@ ctx.height = 600
           }
         },
         legend: {
-          position: 'bottom',
+          position: 'top',
           labels: {
             generateLabels: function (chart) {
               const data = chart.data;
@@ -263,7 +265,9 @@ ctx.height = 600
             }
           }
         }
-      }
+      },
+
+      radius: '80%' // <-- controla el radio del gráfico de pastel
     }
   });
 }

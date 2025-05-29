@@ -6,6 +6,7 @@
 }
 
 body {
+  background-color: #000;
   font-family: "Roboto", sans-serif;
 
 }
@@ -275,7 +276,7 @@ a {
 }
 
 .ods11-section h3 {
-  font-size: 3rem;
+  font-size: 4rem;
   color: #2a7f62;
   margin-bottom: 20px;
   text-align: center;
@@ -297,7 +298,7 @@ a {
 
 .ods11-text p {
   width: 100%;
-  margin-top: 100px;
+  margin-top: 50px;
 }
 
 .ods11-image {
@@ -316,19 +317,20 @@ a {
 
 .text-chart-wrapper {
   display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 40px; /* espacio entre texto y gráfico */
-  margin: 60px 0;
-  flex-wrap: wrap; /* para que sea responsivo */
+  flex-wrap: wrap;
+  gap: 30px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .text-column {
   flex: 1;
   min-width: 300px;
+  margin: 50px 0 0;
 }
 
 .chart-column {
+  margin-top: 100px;
   flex: 1;
   min-width: 300px;
   display: flex;
@@ -336,9 +338,58 @@ a {
 }
 
 .chart-column canvas {
-  width: 100% !important;
+  width: 100% !important; 
   height: auto !important;
-  max-width: 600px;
+  max-width: 100%;
 }
 
 
+@media (max-width: 768px) {
+  .text-chart-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .text-column, .chart-column {
+    width: 100%;
+    min-width: unset;
+  }
+
+  .ods11-content {
+    margin: 100px 20px 0 20px;
+  }
+}
+
+h2{
+  margin-top: 60px;
+}
+
+
+.ods11-section h1{
+  text-align: center;
+  margin-top: 100px;
+  font-weight: bolder;
+  margin-bottom: 100px;
+}
+
+.indicadores{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 100px;
+  margin-bottom: 50px;
+}
+.indicadores > article{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  text-align: justify;
+  padding: 20px;
+  width: 40%;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 25px;
+}
+.indicadores  h2{
+  margin: 0 10px 0 10px;
+  text-align: center;
+}
