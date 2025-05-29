@@ -276,7 +276,7 @@ a {
 }
 
 .ods11-section h3 {
-  font-size: 4rem;
+  font-size: clamp(1.5rem, 2.5vw + 1rem, 4rem);
   color: #2a7f62;
   margin-bottom: 20px;
   text-align: center;
