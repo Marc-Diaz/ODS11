@@ -5,7 +5,7 @@ const titulo = document.getElementById("titulo")
 const div = document.getElementById("municipio");
 const codigo = div.getAttribute("data-codigo");
 
-const url = `http://localhost:3000/api/municipioAll/${codigo}`
+const url = `/api/municipioAll/${codigo}`
 fetch(url)
     .then(response => response.json())
     .then(municipio => {
