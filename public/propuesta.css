@@ -1,0 +1,102 @@
+
+/* Contenedor principal */
+#section-propuesta-content {
+  background: rgba(0, 0, 0, 0.9);
+  color: white;
+}
+
+/* Título de la sección */
+#section-propuesta-content h3 {
+  font-size: 3rem;
+  color: #2a7f62;
+  margin-bottom: 50px;
+  text-align: center;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Contenedor del contenido */
+.propuesta-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Filas de indicadores */
+.indicator-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+/* Bloques individuales */
+.indicator-block {
+  flex: 1;
+  min-width: 280px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-left: 5px solid #f59d08;
+  padding: 25px;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.indicator-block:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Título del indicador */
+.indicator-title {
+  font-weight: bold;
+  color: #f59d08;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+/* Descripción del indicador */
+.indicator-desc {
+  color: #ddd;
+  line-height: 1.6;
+}
+
+/* Responsive: tablets */
+@media screen and (max-width: 992px) {
+  #section-propuesta-content h3 {
+    font-size: 2.5rem;
+  }
+  
+  .indicator-block {
+    padding: 20px;
+  }
+}
+
+/* Responsive: móviles */
+@media screen and (max-width: 768px) {
+  #section-propuesta-content {
+    padding: 60px 0;
+  }
+  
+  #section-propuesta-content h3 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+  
+  .indicator-row {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .indicator-block {
+    min-width: 100%;
+  }
+}
+
+/* Efecto de hover para móviles */
+@media (hover: none) {
+  .indicator-block:hover {
+    transform: none;
+    box-shadow: none;
+  }
+}
