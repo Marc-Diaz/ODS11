@@ -68,7 +68,8 @@ async function renderLineChart() {
       ]
     },
     options: {
-      responsive: false,
+      responsive: true,
+      maintainAspectRatio: false, // ⬅️ Esto permite controlar el tamaño desde CSS
       plugins: {
         title: {
           display: true,
@@ -142,8 +143,9 @@ async function renderBarChart() {
       }]
     },
     options: {
-      responsive: false,
-
+      responsive: true,
+      maintainAspectRatio: false, 
+      
       indexAxis: 'x',
       scales: {
         x: {
@@ -267,7 +269,7 @@ async function renderPieChart() {
         }
       },
 
-      radius: '80%' // <-- controla el radio del gráfico de pastel
+      radius: '80%'
     }
   });
 }
