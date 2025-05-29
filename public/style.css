@@ -18,6 +18,7 @@ main{
 }
 
 .Header__container {
+  z-index: 1000;
   position: absolute;
   background-color: #f59d08;
   box-sizing: border-box;
