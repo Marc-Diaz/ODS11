@@ -14,7 +14,7 @@ fetch(url)
 
 
         //Line chart
-        const lineChart = document.getElementById('lineChart').getContext('2d');
+        const lineChart1 = document.getElementById('lineChartAlq').getContext('2d');
 
         const alquiler = municipio.alquiler.map(m => ({ any: m.any, renda: m.renda, habitatges : m.habitatges }));
 
@@ -23,9 +23,9 @@ fetch(url)
         
         const alquilerAnyo = alquiler.map(m => m.any);
         const alquilerRenda = alquiler.map(m => m.renda);
-        const alquilerHabitatges= alquiler.map(m => m.renda);
-        console.log(alquilerAnyo)
-        console.log(alquilerRenda)
+        const alquilerHabitatges= alquiler.map(m => m.habitatges);
+
+
         const dataAlquiler = {
         labels: alquilerAnyo,
         datasets: [{
@@ -40,6 +40,32 @@ fetch(url)
         const configAlquiler = {
         type: 'line',
         data: dataAlquiler,
+        options: {
+            responsive: true,
+            scales: {
+            y: {
+                beginAtZero: true
+            }
+            }
+        }
+        };
+
+        const lineChart2 = document.getElementById('lineChartHab').getContext('2d');
+        
+        const dataAlquilerHab = {
+        labels: alquilerAnyo,
+        datasets: [{
+            label: 'Habitatges',
+            data: alquilerHabitatges,
+            fill: false,
+            borderColor: 'red',
+            tension: 0.1
+        }]
+        };
+
+        const configAlquilerHab = {
+        type: 'line',
+        data: dataAlquilerHab,
         options: {
             responsive: true,
             scales: {
@@ -98,7 +124,8 @@ fetch(url)
         }
         };
         
-        const lineChart1 = new Chart(lineChart, configAlquiler);
+        const lineChartA = new Chart(lineChart1, configAlquiler);
+        const lineChartB= new Chart(lineChart2, configAlquilerHab);
         const pieChart1 = new Chart(pieChart, configEnergia);
         
     }
