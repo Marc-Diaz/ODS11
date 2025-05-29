@@ -1,5 +1,5 @@
 main{
-    margin-top: 85px;
+    margin-top: 82px;
     background-color: white;
 }
 
@@ -10,7 +10,7 @@ h1{
 }
 canvas{
     background-color: white;
-    margin: 0 auto 50px auto;
+    margin: 50px auto 0 auto;
     width: 40% !important;
     height: 20% !important;
 }
