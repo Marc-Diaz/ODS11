@@ -3,7 +3,6 @@
 const titulo = document.getElementById("titulo")
 
 const div = document.getElementById("municipio");
-console.log(div)
 const codigo = div.getAttribute("data-codigo");
 
 const url = `http://localhost:3000/api/municipioAll/${codigo}`
@@ -82,16 +81,12 @@ fetch(url)
 
         const energia = municipio.energia.map(m => ({ sector: m.descripcio_sector, cosumo: m.consum_kwh }));
 
-
-        console.log(energia)
         energia.sort((a, b) => a.cosumo - b.cosumo);
         
         
         const energiaSector = energia.map(m => m.sector);
         const energiaConsumo = energia.map(m => m.cosumo);
 
-        console.log(energiaSector)
-        console.log(energiaConsumo)
         const dataEnergia = {
         labels: energiaSector,
         datasets: [{

@@ -8,7 +8,7 @@ const map = L.map('map', {
     zoom: 5,
     minZoom: 5,
     maxZoom: 20
-}).setView([41.8675, 1.5208], 8.);
+}).setView([41.8675, 1.5208], 8);
 let limites = [
     [21.698265, -25.708008],
     [55.028022, 18.237305]
@@ -24,7 +24,6 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
 fetch(url)
     .then(response => response.json())
     .then(data => {
-        console.log(data)
         let puntos = 0;
         data.forEach(punto => {
             if (puntos < maxPuntos && punto.latitud && punto.longitud) {
