@@ -1,5 +1,6 @@
 main{
     margin-top: 100px;
+    background-color: white;
 }
 
 h1{
@@ -12,4 +13,8 @@ canvas{
     margin: 0 auto 50px auto;
     width: 40% !important;
     height: 20% !important;
+}
+h2{
+    text-align: center;
+    margin: 20px 0 20px 0 ;
 }

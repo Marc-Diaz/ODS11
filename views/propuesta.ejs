@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>ODS11: Propuesta</title>
   <link rel="icon"
     href="https://www.ribeirao2030.com.br/wp-content/uploads/2021/11/11-CIDADES-E-COMUNIDADES-SUSTENTAVEIS@2x.png">
   <link rel="stylesheet" href="style.css">
@@ -43,26 +43,31 @@
             variables como consumo energético, densidad poblacional, disponibilidad de suelo urbano y precios de
             alquiler. Esta integración permitiría identificar patrones críticos y anticipar dinámicas urbanas no
             sostenibles.
-
+          </p>
+          <p>
             Fomento de la vivienda asequible en zonas tensionadas: Aplicar políticas de promoción de vivienda en
             municipios donde la renta media es baja y el precio del alquiler es elevado. Para ello, se propone priorizar
             intervenciones en municipios con suelo urbano ordenado aún disponible y baja densidad de red viaria,
             facilitando un crecimiento urbano planificado.
-
+          </p>
+          <p>
             Mejora de la eficiencia energética municipal: Identificar los sectores con mayor consumo energético dentro
             de cada municipio (industrial, residencial, terciario) y aplicar medidas específicas de eficiencia. Invertir
             en fuentes de energía renovables cuando sea posible y fomentar hábitos de consumo responsable a nivel
             doméstico y empresarial.
-
+          </p>
+          <p>
             Optimización de la gestión de residuos urbanos: Aplicar políticas diferenciadas por municipio para aumentar
             las tasas de recogida selectiva. Esto incluye la inversión en infraestructura de separación y tratamiento,
             así como campañas de concienciación adaptadas al perfil demográfico y económico local.
-
+          </p>
+          <p>
             Revisión de la infraestructura urbana y de movilidad: Reforzar la red viaria en municipios con baja densidad
             vial en relación con su población, facilitando el acceso a servicios básicos y la movilidad sostenible. Esto
             incluye priorizar el transporte público y los modos no motorizados, adaptando la infraestructura a modelos
             de ciudad más compacta.
-
+          </p>
+          <p>
             Uso de datos geoespaciales y mapas coropléticos: Incorporar herramientas de visualización espacial para
             comunicar de forma clara las desigualdades territoriales. Esto permite una priorización territorial de las
             políticas públicas y mejora la transparencia en la gestión municipal.
@@ -71,6 +76,24 @@
       </div>
     </section>
   </main>
+  <script defer>
+    const burger = document.getElementById('burgerBtn');
+    const menu = document.querySelector('.Header__menu');
+
+    // Togle al hacer clic
+    burger.addEventListener('click', () => {
+      menu.classList.toggle('open');
+    });
+
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 700) {
+        menu.classList.remove('open');
+        menu.style.display = 'flex';
+      } else {
+        menu.style.display = '';
+      }
+    });
+  </script>
 </body>
 
 </html>

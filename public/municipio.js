@@ -55,7 +55,7 @@ fetch(url)
         const dataAlquilerHab = {
         labels: alquilerAnyo,
         datasets: [{
-            label: 'Habitatges',
+            label: 'Viviendas',
             data: alquilerHabitatges,
             fill: false,
             borderColor: 'red',
@@ -95,7 +95,7 @@ fetch(url)
         const dataEnergia = {
         labels: energiaSector,
         datasets: [{
-            label: 'Frutas favoritas',
+            label: 'Consumo (kwh)',
             data: energiaConsumo,
             backgroundColor: [
             'rgba(255, 99, 132, 0.7)',    // rojo

@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Mapa de Municipios</title>
+        <title>ODS11: Mapa</title>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
         <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
         <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
@@ -24,7 +24,6 @@
                     <img src="image.png">
                   </div>
                 </div>
-
                 <menu class="Header__menu">
                   <li class="Header__menuItem"><a href="http://localhost:3000/">Home</a></li>
                   <li class="Header__menuItem"><a href="http://localhost:3000/problemas">Problemas</li></a>
@@ -33,7 +32,26 @@
                   <li class="Header__menuItem"><a href="http://localhost:3000/conclusiones">DataSets</li></a>
                 </menu>
               </header>
+              <h1>Mapa del reciclaje por municipios</h1>
             <div id="map"></div>
         </main>
+        <script defer>
+          const burger = document.getElementById('burgerBtn');
+          const menu = document.querySelector('.Header__menu');
+      
+          // Togle al hacer clic
+          burger.addEventListener('click', () => {
+            menu.classList.toggle('open');
+          });
+      
+          window.addEventListener('resize', () => {
+            if (window.innerWidth > 700) {
+              menu.classList.remove('open');
+              menu.style.display = 'flex';
+            } else {
+              menu.style.display = '';
+            }
+          });
+        </script>
     </body>
 </html>
