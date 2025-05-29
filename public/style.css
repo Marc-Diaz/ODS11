@@ -395,6 +395,12 @@ h2 {
   width: 40%;
   background-color: rgba(255, 255, 255, 0.05);
   border-radius: 25px;
+  border-left: 5px solid #f59d08;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.indicadores > article:hover{
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .indicadores h2 {
