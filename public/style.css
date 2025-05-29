@@ -253,7 +253,6 @@ h1 {
   display:block;
   justify-content: center;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.9); 
   color: white;
   padding: 20px;
   box-sizing: border-box;
@@ -270,8 +269,7 @@ a {
 .ods11-section {
   display: flex;
   margin: 0 0 0 0;
-  background: rgba(255, 255, 255, 0.85);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  background: rgba(0, 0, 0, 0.9);
   color: #333;
 }
 
@@ -310,4 +308,10 @@ a {
   height: auto;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(42, 127, 98, 0.3);
+}
+
+canvas{
+  color: white;
+  background: rgba(0, 0, 0, 0.9);
+
 }
