@@ -7,10 +7,13 @@
 
 body {
   font-family: "Roboto", sans-serif;
+
 }
 
 main{
   margin: 0 0 0 0;
+  background: rgba(0, 0, 0, 0.9);
+
 }
 
 .Header__container {
@@ -249,12 +252,12 @@ h1 {
 #section-propuesta-content,
 #section-mapa-content,
 #section-conclusiones-content {
-  height: 100vh; 
-  display:block;
+  flex-direction:row;
   justify-content: center;
   align-items: center;
   color: white;
   padding: 20px;
+    background: rgba(0, 0, 0, 0.9);
   box-sizing: border-box;
   width: 100%; 
 }
@@ -267,10 +270,8 @@ a {
 
 
 .ods11-section {
-  display: flex;
   margin: 0 0 0 0;
   background: rgba(0, 0, 0, 0.9);
-  color: #333;
 }
 
 .ods11-section h3 {
@@ -283,17 +284,20 @@ a {
 
 .ods11-content {
   margin: 100px 150px 0 200px;
-  display: flex;
   align-items: center;
-  gap: 25px;
   justify-content: center;
 }
 
 .ods11-text {
-  flex: 1 1 350px;
+  flex-direction: row;
   font-size: 1.1rem;
   line-height: 1.6;
   padding-right: 15px;
+}
+
+.ods11-text p {
+  width: 100%;
+  margin-top: 100px;
 }
 
 .ods11-image {
@@ -310,8 +314,31 @@ a {
   box-shadow: 0 4px 8px rgba(42, 127, 98, 0.3);
 }
 
-canvas{
-  color: white;
-  background: rgba(0, 0, 0, 0.9);
-
+.text-chart-wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 40px; /* espacio entre texto y gráfico */
+  margin: 60px 0;
+  flex-wrap: wrap; /* para que sea responsivo */
 }
+
+.text-column {
+  flex: 1;
+  min-width: 300px;
+}
+
+.chart-column {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  justify-content: center;
+}
+
+.chart-column canvas {
+  width: 100% !important;
+  height: auto !important;
+  max-width: 600px;
+}
+
+

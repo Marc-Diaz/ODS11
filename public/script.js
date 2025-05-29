@@ -39,7 +39,8 @@ const datosUrbanizable = años.map(a => {
 
   const ctx = document.getElementById('lineChart').getContext('2d');
   Chart.defaults.color = '#FFFFFF';
-  Chart.defaults.borderColor = '#FFFFFF'
+  Chart.defaults.borderColor = '#FFFFFF';
+
   new Chart(ctx, {
     type: 'line',
     data: {
@@ -80,6 +81,7 @@ const datosUrbanizable = años.map(a => {
           title: {
             display: true,
             text: 'Año',
+            color: 'white'
 
           }
         },
@@ -209,6 +211,8 @@ async function renderPieChart() {
   const { labels, valores } = await fetchConsumoEnergetico();
 
   const ctx = document.getElementById('pieChart').getContext('2d');
+  ctx.width = 800;
+ctx.height = 600
   new Chart(ctx, {
     type: 'pie',
     data: {
@@ -240,7 +244,7 @@ async function renderPieChart() {
           }
         },
         legend: {
-          position: 'right',
+          position: 'bottom',
           labels: {
             generateLabels: function (chart) {
               const data = chart.data;
@@ -252,6 +256,7 @@ async function renderPieChart() {
                   text: `${label} (${percentage}%)`,
                   fillStyle: data.datasets[0].backgroundColor[i],
                   strokeStyle: data.datasets[0].borderColor ? data.datasets[0].borderColor[i] : data.datasets[0].backgroundColor[i],
+                  fontColor: 'white',
                   index: i
                 };
               });
