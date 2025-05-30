@@ -1,17 +1,16 @@
 @import url("https://fonts.googleapis.com/css?family=Heebo:900|Roboto|Satisfy&display=swap");
 
-*{
+* {
   padding: 0px;
   margin: 0px;
 }
 
 body {
   background-color: #000;
-  font-family:Arial, Helvetica, sans-serif
-
+  font-family: Arial, Helvetica, sans-serif
 }
 
-main{
+main {
   margin: 0 0 0 0;
   background: rgba(0, 0, 0, 0.9);
 
@@ -95,7 +94,7 @@ h1 {
   opacity: 0.85;
   margin-top: 0.5em;
   text-align: center;
-  
+
 }
 
 .Hero__action {
@@ -126,9 +125,8 @@ h1 {
 @media (max-width: 700px) {
   .Hero__content {
     width: 90%;
-    margin: 40vh 2em auto 2em;
   }
-  
+
   .Header__burger {
     display: block;
   }
@@ -145,15 +143,16 @@ h1 {
     padding: 1em;
     z-index: 10;
   }
+
   .Header__menu.open {
     display: flex;
   }
-  
+
 
   .Header__menuItem {
     margin: 1em 0;
   }
-  
+
 }
 
 .Hero__action:hover {
@@ -164,12 +163,15 @@ h1 {
   0% {
     transform: scale(1);
   }
+
   40% {
     transform: scale(1.07);
   }
+
   50% {
     transform: scale(1.04);
   }
+
   60% {
     transform: scale(1.07);
   }
@@ -238,9 +240,12 @@ h1 {
   opacity: 0.5;
 }
 
-  #myVideo {
+#myVideo {
   position: absolute;
-  top: 0; right: 0; bottom: 0; left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   opacity: 1;
@@ -255,14 +260,14 @@ h1 {
 #section-propuesta-content,
 #section-mapa-content,
 #section-conclusiones-content {
-  flex-direction:row;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   color: white;
   padding: 20px;
-    background: rgba(0, 0, 0, 0.9);
+  background: rgba(0, 0, 0, 0.9);
   box-sizing: border-box;
-  width: 100%; 
+  width: 100%;
 }
 
 
@@ -273,33 +278,36 @@ a {
 
 
 .ods11-section {
+    text-align: center;
+align-items: center;
   margin: 0 0 0 0;
   background: rgba(0, 0, 0, 0.9);
 }
 
 .ods11-section h3 {
-  font-size: clamp(1.5rem, 2.5vw + 1rem, 4rem);
+  font-size: clamp(1rem, 2.5vw + 1rem, 4rem);
   color: #2a7f62;
   margin-bottom: 20px;
   text-align: center;
-  font-weight: 700;
+  font-weight: 700px;
 }
 
 .ods11-content {
   margin: 100px 150px 0 200px;
+  text-align: left;
   align-items: center;
   justify-content: center;
 }
 
 .ods11-text {
-  flex-direction: row;
+ flex-direction: row;
   font-size: 1.1rem;
   line-height: 1.6;
   padding-right: 15px;
 }
 
 .ods11-text p {
-  width: 100%;
+ width: 100%;
   margin-top: 20px;
   line-height: 1.5;
 }
@@ -307,18 +315,15 @@ a {
 .ods11-image {
   float: left;
   margin: 20px;
-  margin-right: 15px;
-  max-height: 850px;
-  max-width: 850px;
+  margin-right: 100px;
   margin-top: 50px;
+   max-height: 400px;
+  height: auto;
+ 
 }
 
-.ods11-image {
-  max-width: 200px;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(42, 127, 98, 0.3);
-}
+
+
 
 .text-chart-wrapper {
   display: flex;
@@ -343,7 +348,7 @@ a {
 }
 
 .chart-column canvas {
-  width: 100% !important; 
+  width: 100% !important;
   height: auto !important;
   max-width: 100%;
 }
@@ -359,7 +364,7 @@ a {
   .chart-column {
     width: 100%;
     height: 100%;
-    
+
     min-width: unset;
     min-height: 400px;
   }
@@ -368,15 +373,31 @@ a {
     margin: 100px 20px 0 20px;
   }
 
- .chart-column canvas {
+  .chart-column canvas {
     min-height: 350px;
     aspect-ratio: 2 / 1;
     height: 100%;
   }
+
+  .ods11-image {
+    float: left;
+    margin: 20px;
+    margin-right: 15px;
+    max-height: 850px;
+    max-width: 850px;
+    margin-top: 50px;
+  }
+
+  .ods11-image {
+    max-width: 200px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(42, 127, 98, 0.3);
+  }
 }
 
 h2 {
-  margin-top: 60px;
+  margin-top: 150px;
   font-size: 1.8rem;
   text-align: center;
 }
@@ -395,10 +416,11 @@ h2 {
   justify-content: center;
   gap: 100px;
   margin-bottom: 50px;
-  flex-wrap: wrap; /* Importante para que no se desborde */
+  flex-wrap: wrap;
+  /* Importante para que no se desborde */
 }
 
-.indicadores > article {
+.indicadores>article {
   display: flex;
   flex-direction: column;
   align-content: center;
@@ -410,7 +432,8 @@ h2 {
   border-left: 5px solid #f59d08;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.indicadores > article:hover{
+
+.indicadores>article:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
@@ -423,7 +446,7 @@ h2 {
 
 /* === TABLETS (pantallas medianas) === */
 @media (max-width: 1024px) {
-  .indicadores > article {
+  .indicadores>article {
     width: 60%;
   }
 
@@ -446,7 +469,7 @@ h2 {
     align-items: center;
   }
 
-  .indicadores > article {
+  .indicadores>article {
     width: 90%;
   }
 

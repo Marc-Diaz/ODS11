@@ -97,3 +97,12 @@
     font-size: 2.5em;
     fill: #fff;
   }
+
+  @media (max-width: 700px) {
+    .container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  }

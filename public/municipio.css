@@ -1,9 +1,11 @@
 main {
-    margin-top: 80px;
-    background-color: white;
+  background-color: #000;
 }
 
 h1 {
+    
+    margin: 200px;
+    color: white;
     text-align: center;
     font-weight: bolder;
     margin-bottom: 40px;
