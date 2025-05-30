@@ -118,7 +118,8 @@ fetch(url)
             }
         }
         };
-        
+        Chart.defaults.color = '#FFFFFF';
+        Chart.defaults.borderColor = '#FFFFFF';
         const lineChartA = new Chart(lineChart1, configAlquiler);
         const lineChartB= new Chart(lineChart2, configAlquilerHab);
         const pieChart1 = new Chart(pieChart, configEnergia);
