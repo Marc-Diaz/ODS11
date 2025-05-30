@@ -1,5 +1,4 @@
 export async function combinarEndPointsPorMunicipio(codigoMunicipio6) {
-    console.log(codigoMunicipio6)
     let codigoMunicipio5 = codigoMunicipio6.toString().substring(0, 5);
     
     // Construcción de URLs con filtros específicos por municipio
